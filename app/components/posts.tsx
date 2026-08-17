@@ -15,12 +15,8 @@ export function BlogPosts() {
           }
           return 1
         })
-        .map((post) => (
-          <Link
-            key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
-            href={`/blog/${post.slug}`}
-          >
+        .map((post) => {
+          let entry = (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
               <p className="text-neutral-600 dark:text-neutral-400 w-[130px] shrink-0 tabular-nums whitespace-nowrap">
                 {formatDate(post.metadata.publishedAt, false)}
@@ -29,8 +25,32 @@ export function BlogPosts() {
                 {post.metadata.title}
               </p>
             </div>
-          </Link>
-        ))}
+          )
+
+          if (post.metadata.link) {
+            return (
+              <a
+                key={post.slug}
+                className="flex flex-col space-y-1 mb-4"
+                href={post.metadata.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {entry}
+              </a>
+            )
+          }
+
+          return (
+            <Link
+              key={post.slug}
+              className="flex flex-col space-y-1 mb-4"
+              href={`/blog/${post.slug}`}
+            >
+              {entry}
+            </Link>
+          )
+        })}
     </div>
   )
 }

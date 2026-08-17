@@ -4,7 +4,9 @@ export const baseUrl = 'https://maulimogal.com'
 
 export default async function sitemap() {
   let blogs = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: post.metadata.link
+      ? `${baseUrl}${post.metadata.link}`
+      : `${baseUrl}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }))
 
