@@ -7,9 +7,6 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  '/contact': {
-    name: 'contact',
-  },
   '/Mauli_Mogal_Resume.pdf': {
     name: 'resume',
   },
