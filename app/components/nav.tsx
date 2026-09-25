@@ -7,9 +7,6 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  'https://medium.com/@maulimogal': {
-    name: 'medium',
-  },
 }
 
 export function Navbar() {

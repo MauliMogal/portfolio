@@ -18,7 +18,7 @@ export function BlogPosts() {
         .map((post) => {
           let entry = (
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[130px] shrink-0 tabular-nums whitespace-nowrap">
+              <p className="text-neutral-600 dark:text-neutral-400 w-[180px] shrink-0 tabular-nums whitespace-nowrap">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
