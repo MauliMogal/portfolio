@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     template: '%s | Mauli Mogal',
   },
   description:
-    'I sell business software for a living. Exploring Frappe and ERPNext.',
+    'I work on partnerships at Frappe. Writing about ERP, partners and pricing.',
   openGraph: {
     title: 'Mauli Mogal',
     description:
-      'I sell business software for a living. Exploring Frappe and ERPNext.',
+      'I work on partnerships at Frappe. Writing about ERP, partners and pricing.',
     url: baseUrl,
     siteName: 'Mauli Mogal',
     locale: 'en_US',

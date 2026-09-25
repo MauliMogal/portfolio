@@ -7,21 +7,20 @@ export default function Page() {
         Mauli Mogal
       </h1>
       <p className="mb-4">
-        {`I sell business software for a living.`}
+        {`I work on partnerships at Frappe.`}
       </p>
       <p className="mb-4">
-        {`I manage the entire sales cycle: first call, demo, onboarding, and
-        staying with the customer until the software is actually working for
-        them.`}
+        {`I help grow Frappe's partner ecosystem and work on how Frappe explains
+        its products to the businesses that use them.`}
       </p>
       <p className="mb-4">
-        {`I've learned to listen first and show less of the product, not more.
-        Most demos fail because the seller talks about features instead of the
-        customer's actual problem.`}
+        {`Before Frappe, I sold business software: first call, demo, onboarding,
+        and staying with the customer until the software was actually working
+        for them. That taught me to listen first and show less of the product,
+        not more.`}
       </p>
       <p className="mb-4">
-        {`I'm aiming for a Product Consultant role in the Frappe and ERPNext
-        ecosystem.`}
+        {`Right now I'm writing about one idea: don't pay per user.`}
       </p>
       <div className="my-8">
         <BlogPosts />

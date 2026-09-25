@@ -25,6 +25,7 @@ export async function generateMetadata({ params }) {
     publishedAt: publishedTime,
     summary: description,
     image,
+    canonical,
   } = post.metadata
   let ogImage = image
     ? image
@@ -33,6 +34,9 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
+    alternates: {
+      canonical: canonical || `${baseUrl}/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
@@ -85,7 +89,7 @@ export default async function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Mauli Mogal',
             },
           }),
         }}

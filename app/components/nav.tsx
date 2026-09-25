@@ -7,8 +7,8 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  '/Mauli_Mogal_Resume.pdf': {
-    name: 'resume',
+  'https://medium.com/@maulimogal': {
+    name: 'medium',
   },
 }
 
@@ -22,12 +22,12 @@ export function Navbar() {
         >
           <div className="flex flex-row space-x-0 pr-10">
             {Object.entries(navItems).map(([path, { name }]) => {
-              const isResume = path === '/Mauli_Mogal_Resume.pdf'
+              const isExternal = path.startsWith('http')
               return (
                 <Link
                   key={path}
                   href={path}
-                  {...(isResume
+                  {...(isExternal
                     ? { target: '_blank', rel: 'noopener' }
                     : {})}
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"

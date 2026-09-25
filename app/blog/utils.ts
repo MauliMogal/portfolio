@@ -7,6 +7,7 @@ type Metadata = {
   summary: string
   image?: string
   link?: string
+  canonical?: string
 }
 
 function parseFrontmatter(fileContent: string) {
