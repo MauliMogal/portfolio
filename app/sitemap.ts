@@ -3,12 +3,12 @@ import { getBlogPosts } from 'app/blog/utils'
 export const baseUrl = 'https://maulimogal.com'
 
 export default async function sitemap() {
-  let blogs = getBlogPosts().map((post) => ({
-    url: post.metadata.link
-      ? `${baseUrl}${post.metadata.link}`
-      : `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }))
+  let blogs = getBlogPosts()
+    .filter((post) => !post.metadata.link)
+    .map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.metadata.publishedAt,
+    }))
 
   let routes = ['', '/blog'].map((route) => ({
     url: `${baseUrl}${route}`,

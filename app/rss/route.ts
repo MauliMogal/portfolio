@@ -16,9 +16,7 @@ export async function GET() {
         `<item>
           <title>${post.metadata.title}</title>
           <link>${
-            post.metadata.link
-              ? `${baseUrl}${post.metadata.link}`
-              : `${baseUrl}/blog/${post.slug}`
+            post.metadata.link || `${baseUrl}/blog/${post.slug}`
           }</link>
           <description>${post.metadata.summary || ''}</description>
           <pubDate>${new Date(
